@@ -1,0 +1,181 @@
+/* fonts */
+
+@font-face {
+  font-family: output-font;
+  src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: label-font;
+  src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: input-font;
+  src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+/* regulars */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* prevents overflow? */
+html {
+  width: 100%;
+  background-color: hsl(0, 0%, 86%);
+}
+
+body {
+  max-width: 100%;
+}
+
+/* center the content  */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.input {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+
+form > div > span {
+  font-family: label-font;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  color: hsl(0, 1%, 44%);
+}
+
+input{
+  width: 7rem;
+  height: 2rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid hsl(0, 0%, 86%);
+  font-family: input-font;
+  font-size: 1.5rem;
+  
+}
+
+.background {
+  padding: 4rem;
+  background-color: white;
+  border-radius: 1rem 1rem 10rem 1rem;
+  min-width: 40rem;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 2.5rem 0;
+}
+
+img {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+}
+
+.horizontal-line {
+  height: 1px;
+  min-width: 100%;
+  border: 1px solid hsl(0, 0%, 94%);
+}
+
+.output {
+  font-family: output-font;
+  font-size: 5rem;
+  color: hsl(0, 0%, 8%);
+}
+
+.output div span {
+  color: hsl(259, 100%, 65%);
+}
+
+.input{
+  font-family: output-font;
+  color: hsl(0, 0%, 8%);
+}
+
+.warning{
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+}
+
+
+
+.hidden{
+  display: none;
+}
+
+.warning{
+  color: hsl(0, 100%, 67%);
+}
+
+/* ACTIVE STATE */
+
+img:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 8%);
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.color-red{
+  color: hsl(0, 100%, 67%);
+}
+
+.border-red{
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
+/* responsiveness */
+@media only screen and (max-width: 700px) {
+  .background {
+    padding: 2rem;
+    border-radius: 1rem 1rem 10rem 1rem;
+    min-width: 10rem;
+  }
+  .input {
+    justify-content: space-evenly;
+  }
+  .img {
+    padding: 4rem 0;
+  }
+  img {
+    left: 40%;
+    height: 4rem;
+  }
+  .output {
+    font-size: 3rem;
+  }
+  .input {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 1rem;
+  }
+  input {
+    width: 5.75rem;
+    font-size: 1.25rem;
+  }
+  .background {
+    padding: 3rem 1.5rem;
+  }
+}

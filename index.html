@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- linking css -->
+    <link rel="stylesheet" href="./styels.css" />
+
+    <title>Age calculator</title>
+  </head>
+  <body>
+    <!-- to center the stuff  -->
+    <div class="container">
+      <!-- background for the content -->
+      <div class="background">
+        <!-- input values here -->
+        <form class="input">
+          <!-- day input -->
+          <div class="day-input">
+            <span id="day-text">DAY</span><br />
+            <input type="text" id="day" class="input-date" name="day" placeholder="DD" min="1" max="31" onchange="errorChecking()"/>
+            <div class="valid-date hidden warning">Must be a valid date</div>
+            <div class="required-day hidden warning">This field is required</div>
+            <div class="valid-day hidden warning">Must be a valid Day</div>
+          </div>
+          <!-- month input -->
+          <div class="month-input">
+            <span  id="month-text">MONTH</span><br />
+            <input type="text" id="month" class="input-date" name="month" placeholder="MM" min="1" max="12" onchange="errorChecking()"/>
+            <div class="required-month hidden warning">This field is required</div>
+            <div class="valid-month hidden warning">Must be a Valid Month</div>
+          </div>
+          <!-- year input -->
+          <div class="year-input">
+            <span id="year-text">YEAR</span><br />
+            <input type="text" id="year" class="input-date" name="year" placeholder="YYYY" min="1900" max="2100" onchange="errorChecking()"/>
+            <div class="required-year hidden warning">This field is required</div>
+            <div class="valid-year hidden warning">B*TCH PLEASE</div>
+          </div>
+        </form>
+        <!-- supposed to be a button -->
+        <div class="img">
+          <div class="horizontal-line"></div>
+          <img src="./assets/images/icon-arrow.svg" alt="down arrow sign" onclick="errorChecking()"/>
+        </div>
+         <!-- output area  -->
+        <div class="output">
+          <div id="year-output"><span>--</span> years</div>
+          <div id="month-output"><span>--</span> months</div>
+          <div id="day-output"><span>--</span> days</div>
+        </div>
+      </div>
+    </div>
+    <!-- vanilla js -->
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+<!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days -->
